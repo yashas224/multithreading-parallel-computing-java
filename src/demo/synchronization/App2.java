@@ -14,13 +14,13 @@ class ProcessorClass {
 			while (true) {
 				if (list.size() == LIMIT) {
 					System.out.println("List FULLL, Waiting for removing items from the list...");
+					this.notify();
 					this.wait();
 				} else {
 					System.out.println("Adding: " + val);
 					list.add(val++);
-					this.notify();
 				}
-				Thread.sleep(500);
+				Thread.sleep(1000);
 			}
 		}
 	}
@@ -31,12 +31,12 @@ class ProcessorClass {
 			while (true) {
 				if (list.size() == BOTTOM) {
 					System.out.println("List EMPTY, Waiting for adding  items to the list...");
+					this.notify();
 					this.wait();
 				} else {
 					System.out.println("removing: " + list.remove(--val));
-					this.notify();
 				}
-				Thread.sleep(500);
+				Thread.sleep(1000);
 
 			}
 		}

@@ -10,7 +10,7 @@ public class SingleThreadExecutorDemo {
 	public static void main(String[] args) {
 		ExecutorService exe = Executors.newSingleThreadExecutor();
 		for (int i = 0; i < 5; i++) {
-			exe.execute(new Task(i));
+			exe.submit(new Task(i));
 		}
 		exe.shutdown();
 

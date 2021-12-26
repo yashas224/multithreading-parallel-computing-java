@@ -3,7 +3,7 @@ package multithreading.concepts;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class AtomicDemo {
-	//  not thread safe
+	// not thread safe
 	// private int counter = 0;
 	// private volatile int counter = 0;
 

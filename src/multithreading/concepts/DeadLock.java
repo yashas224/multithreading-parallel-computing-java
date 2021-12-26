@@ -8,7 +8,9 @@ public class DeadLock {
 	Lock lock2 = new ReentrantLock();
 
 	public static void main(String[] args) {
-		DeadLock obj = new DeadLock();
+		 DeadLock obj = new DeadLock();
+//		PreventDeadlock obj = new PreventDeadlock();
+
 		new Thread(() -> obj.worker1()).start();
 
 		new Thread(obj::worker2).start();

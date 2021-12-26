@@ -49,6 +49,7 @@ class Worker {
 		System.out.println("Producer method...");
 		this.condition.await();
 		System.out.println("Producer method got the Lock  again...");
+		this.lock.unlock();
 	}
 
 	public void consume() throws InterruptedException {

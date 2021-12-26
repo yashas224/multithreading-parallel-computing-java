@@ -1,12 +1,14 @@
 package multithreading.concepts;
 
+import java.lang.invoke.VolatileCallSite;
+
 public class App1 {
 	public static void main(String[] args) throws InterruptedException {
 		Worker obj = new Worker();
 		Thread t1 = new Thread(obj);
 		t1.start();
 		
-		Thread.sleep(100);
+		Thread.sleep(3000);
 
 		obj.setTerminated(true);
 		System.out.println("Terminated the worker from main thread");
@@ -14,7 +16,7 @@ public class App1 {
 }
 
 class Worker implements Runnable {
-	private boolean terminated;
+	private volatile boolean terminated;
 
 	@Override
 	public void run() {

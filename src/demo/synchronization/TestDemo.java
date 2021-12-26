@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class TestDemo {
 	public static int counter = 0;
-//	Object
+	// Object
 	// private synchronized static void increment() {
 	// counter++;
 	// }

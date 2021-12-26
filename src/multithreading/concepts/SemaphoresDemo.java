@@ -5,19 +5,25 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 /**
+ * *
+ * <p>
+ * Semaphores are often used to restrict the number of threads than can access
+ * some (physical or logical) resource
  * 
- * - semaphore maintains a set of permits - acquire() -> if a permit is
+ * * - semaphore maintains a set of permits - acquire() -> if a permit is
  * available then takes it - release() -> adds a permit
  * 
  * Semaphore just keeps a count of the number available new Semaphore(int
  * permits, boolean fair) !!!
+ * 
+ * 
  */
 
 enum Downloader {
 
 	INSTANCE;
 
-	private Semaphore semaphore = new Semaphore(5, true);
+	private Semaphore semaphore = new Semaphore(3, true);
 
 	public void downloadData() {
 
