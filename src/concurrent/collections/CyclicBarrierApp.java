@@ -14,7 +14,7 @@ public class CyclicBarrierApp {
 		// TODO Auto-generated method stub
 		CyclicBarrier cyclicBarrier = new CyclicBarrier(5, () -> System.out.println("after all threads are done"));
 		ExecutorService exe = Executors.newFixedThreadPool(5);
-		for (int i = 0; i < 5; i++)
+		for (int i = 0; i < 35; i++)
 			exe.execute(new CyclicBarrierApp().new Worker(i, cyclicBarrier));
 
 		exe.shutdown();
@@ -39,7 +39,7 @@ public class CyclicBarrierApp {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("Afer wait");
+//			System.out.println("Afer wait");
 		}
 
 		private void doWork() {
