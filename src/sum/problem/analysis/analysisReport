@@ -1,0 +1,20 @@
+Number of threads :4
+
+SUM: 35517910
+Sequential Approach Time Taken in milisecnds:95
+Thread details main working form :0 to 99999999
+Thread details Thread-0 working form :0 to 49999999
+Thread details Thread-1 working form :50000000 to 99999999
+Thread details Thread-2 working form :0 to 24999999
+Thread details Thread-3 working form :25000000 to 49999999
+Thread details Thread-4 working form :50000000 to 74999999
+Thread-4 done calculating from :50000000 to 74999999
+Thread-2 done calculating from :0 to 24999999
+Thread details Thread-5 working form :75000000 to 99999999
+Thread-5 done calculating from :75000000 to 99999999
+Thread-1 done calculating from :50000000 to 99999999
+Thread-3 done calculating from :25000000 to 49999999
+Thread-0 done calculating from :0 to 49999999
+main done calculating from :0 to 99999999
+SUM: 35517910
+MultiThreaded Approach Time Taken in milisecnds:220
