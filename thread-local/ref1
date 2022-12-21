@@ -1,0 +1,8 @@
+refer these to understand the concept:
+
+Thread class:
+java.lang.Thread#threadLocals
+
+ThreadLocal class:
+java.lang.ThreadLocal#set
+java.lang.ThreadLocal#get
